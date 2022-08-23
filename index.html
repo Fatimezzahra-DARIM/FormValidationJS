@@ -5,79 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
-    <title>Document</title>
+    <title>Form Validation js</title>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
+    <div class ="container">
+        <div class ="header">
             <h2>Create Account</h2>
+
         </div>
         <form class="form" id="form">
-            <div class="form-control">
-                <label>fullName</label>
-                <input type="text" placeholder="enter your username" id="fullName">
-                <i class="fas fa-check-cercle"></i>
-                <i class="fas fa-exclamation-cercle"></i>
-                <small>error message</small>
+        
 
-                <!-- Age -->
-                <label>Age</label>
-                <input type="text" placeholder="enter your age" id="age">
-                <i class="fas fa-check-cercle"></i>
-                <i class="fas fa-exclamation-cercle"></i>
-                <small>error message</small>
-            <!-- </div>
-            <div class="form-control"> -->
-                <label>Email</label>
-                <input type="text" placeholder="enter you email" id="email">
-                <i class="fas fa-check-cercle"></i>
-                <i class="fas fa-exclamation-cercle"></i>
-                <small>error message</small>
+        <div class ="form-control ">
+            <label >Full Name</label>
+            <input type="text"  id="fullName"  placeholder="Enter your Full Name">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small> Error message </small>
+    
+        </div>
+        <div class ="form-control ">
+            <label >Age</label>
+            <input type="number"  id="age"  placeholder="Enter your age">
+            
+            <small> Error message </small>
+    
+        </div>
+        <div class ="form-control ">
+                <label >Email</label>
+                <input type="text"  id="email"  placeholder="Enter you email adress">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small> Error message </small>
+        
+        </div>
 
-            <!-- </div>
-            <div class="form-control"> -->
-                <label>Your Gender</label>
-                <select name="gender" id="gender">
-                  <option disabled selected value>-- select an option --</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
-              <!-- </div>
-            <div class="form-control"> -->
-                <!-- Number -->
-                <label>Phone number</label>
-                <input type="text" placeholder="enter your phone number" id="phoneNumber">
-                <i class="fas fa-check-cercle"></i>
-                <i class="fas fa-exclamation-cercle"></i>
-                <small>error message</small>
-                <!-- contact method -->
-                <label>Choose a contact method</label>
-  <input type="checkbox" id="nmbr" name="check1" value="Number">
-  <label for="vehicle1"> With whatsapp number</label>
-  <input type="checkbox" id="mail" name="check2" value="Email">
-  <label for="vehicle2"> With email</label><br>
 
-                <!-- Password -->
-                <label>password</label>
-                <input type="password" placeholder="enter your password" id="password">
-                <i class="fas fa-check-cercle"></i>
-                <i class="fas fa-exclamation-cercle"></i>
-                <small>error message</small>
-                
-            <!-- </div>
-            <div class="form-control"> -->
-                <label>password check</label>
-                <input type="password" placeholder="check your password" id="checkPassword">
-                <i class="fas fa-check-cercle"></i>
-                <i class="fas fa-exclamation-cercle"></i>
-                <small>error message</small>
-                
-            <!-- </div> -->
-            <button>submit</button>
+        <div class="form-control">
+            <label>Your Gender</label>
+            <select name="gender" id="gender">
+              <option value="default" selected>-- select an option --</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+            <small> Error message </small>
+          </div>
+
+          <div class ="form-control ">
+            <label >Phone Number</label>
+            <input type="number"  id="phoneNumber"  placeholder="Enter your phone number">
+            
+            <small> Error message </small>
+    
+        </div>
+
+        <div class ="form-control">
+                    <label >Password</label>
+                    <input type="password"  id="password"  placeholder="Enter your password">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small> Error message </small>
+            
+        </div>
+
+        
+        <div class ="form-control">
+            <label >Password check</label>
+            <input type="password"  id="checkPassword"  placeholder="check your password">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small> Error message </small>
+    
+        </div>
+        <button>submit </button>
         </form>
     </div>
-    <script type="text/javascript" src="./script.js"></script>
-    
+    <!-- script / js -->
+    <script src="./script.js"></script>
 </body>
 </html>

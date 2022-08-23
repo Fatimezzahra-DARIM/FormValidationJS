@@ -1,13 +1,8 @@
-/* :root{
-    /* Defining variable,root accessible */
-     /* --success-color:#2ecc71;
-    --error-color: #e74c3c;
-}  */ */
 *{
     box-sizing: border-box;
 }
 body{
-    background-color:rgb(231, 151, 186);
+    background:url(./p9mUO.jpg);
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
@@ -16,17 +11,17 @@ body{
     min-height: 100vh;
 }
 .container{
-    background-color: rgb(249, 239, 248);
+    background-color: rgb(216, 211, 215);
     border-radius: 5px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0);
     width:400px ;
     max-width: 100%;
     overflow: hidden;
 
 }
 .header{
-    background-color: #fadafa;
-    padding: 20px 40px;
+    background-color: #6f6c6f;
+    padding: 10px 30px;
     border-bottom: 1px solid #e3dee3;
 }
 .header h2{
@@ -42,7 +37,8 @@ body{
 }
 .form-control label{
     display: inline-block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    
 }
 .form-control input{
     border: 2px solid #e3dee3;
@@ -62,12 +58,12 @@ body{
     font-size: 13px;
 
 }
- .form-control.success input{ 
+.form-control.success input{
     border-color: rgb(80, 237, 132);
 }
 .form-control.error input{
     border-color: rgb(235, 27, 27);
- } 
+}
 .form-control i{
     position: absolute;
     top: 40px;
@@ -75,15 +71,21 @@ body{
     /* visibility: hidden; */
 
 }
+.form-control.error small{
+    visibility: visible;
+    color: rgb(235, 27, 27) ;
+
+
+}
 
 .form-control small{
-    position: absolute;
+     position: absolute;
     visibility: hidden;
     left: 0;
-    bottom: 0;
+    /* bottom: 0; */
 }
 .form button{
-    background-color: #f1b2f5;
+    background-color: #7f787f;
     border: 2px solid white ;
     color: #fff;
     display: block;
@@ -91,4 +93,13 @@ body{
     padding: 10px;
     font-size: 16px;
     border-radius: 4px;
+    margin-top: 30px;
 }
+.form button:hover{
+    background-color: #ede9ed;
+}
+.form-control.error select{
+    border-color: rgb(235, 27, 27);
+}
+
+

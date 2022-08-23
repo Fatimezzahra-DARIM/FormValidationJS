@@ -7,6 +7,8 @@ const password = document.getElementById('password');
 const password2 = document.getElementById('checkPassword');
 const phoneNumber = document.getElementById("phoneNumber");
 const submit = document.getElementById("submit");
+
+
 // !add event listener
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -20,12 +22,11 @@ form.addEventListener("submit", (e) => {
     const fullNameValue = fullName.value.trim();
     // const usernameValue = userName.value.trim().toLowerCase();
     const emailValue = email.value.trim();
-    const genderValue = gender.value.trim();
+    const genderValue = gender.value;
     const ageValue = age.value.trim();
     const phoneNumberValue = phoneNumber.value.trim();
     const passwordValue = password.value.trim();
     const checkPasswordValue = checkPassword.value.trim();
-    // !full name validation check
     if (fullNameValue === "") {
         // show error message
         // add error class
@@ -34,7 +35,7 @@ form.addEventListener("submit", (e) => {
         // focus element
         fullName.focus();
       } else if (fullNameValue.length < 3 || fullNameValue.length > 50) {
-        setErrorMessage(fullName, "This field minimum character is 5 and maximum character is 50. Please input at this range.");
+        setErrorMessage(fullName, "This field minimum character is 3. Please input at this range.");
     
         // focus element
         fullName.focus();
@@ -60,6 +61,7 @@ form.addEventListener("submit", (e) => {
         // add success class
         setSuccessMessage(email);
       }
+      
 
       // !phone validation check
       if (phoneNumberValue === "") {
@@ -70,7 +72,7 @@ form.addEventListener("submit", (e) => {
         // focus element
         phoneNumber.focus();
       } else if (phoneNumberValue.length < 10) {
-        setErrorMessage(phoneNumber, "This field minimum maximum character is 11. Please input at this range.");
+        setErrorMessage(phoneNumber, "This field minimum maximum character is 10.");
     
         // focus element
         phoneNumber.focus();
@@ -87,7 +89,7 @@ form.addEventListener("submit", (e) => {
         // focus element
         password.focus();
       } else if (ageValue < 18 || ageValue.length > 2) {
-        setErrorMessage(age, "This field minimum character is 18 . Please input at this range.");
+        setErrorMessage(age, "This field minimum age is 18 . Please input at this range.");
     
         // focus element
         password.focus();
@@ -105,8 +107,8 @@ if (passwordValue === "") {
 
     // focus element
     password.focus();
-  } else if (passwordValue.length < 6 || passwordValue.length > 20) {
-    setErrorMessage(password, "This field minimum character is 6 and maximum character is 20. Please input at this range.");
+  } else if (passwordValue.length < 8 || passwordValue.length > 20) {
+    setErrorMessage(password, "This field minimum character is 8.");
 
     // focus element
     password.focus();
@@ -124,7 +126,7 @@ if (passwordValue === "") {
     // focus element
     checkPassword.focus();
   } else if (checkPasswordValue.length < 6 || checkPasswordValue.length > 20) {
-    setErrorMessage(checkPassword, "This field minimum character is 6 and maximum character is 20. Please input at this range.");
+    setErrorMessage(checkPassword, "This field minimum character is 8.");
 
     // focus element
     checkPassword.focus();
@@ -137,6 +139,16 @@ if (passwordValue === "") {
     // add success class
     setSuccessMessage(checkPassword);
   }
+
+  if(genderValue=='default'){
+
+    setErrorMessage(gender, "Select your gender");
+    
+    }else {
+        // add success class
+        setSuccessMessage(gender);
+      }
+
   }
   // !input error message show function
 function setErrorMessage(input, message) {
@@ -179,3 +191,9 @@ function setErrorMessage(input, message) {
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
   }
+
+
+
+
+
+    
